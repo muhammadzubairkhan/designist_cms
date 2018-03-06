@@ -84,7 +84,8 @@ class Main extends CI_Controller {
 			$data['message'] = 'Page Added Successfully';
 			//Loading View
 			$this->load->edit_page();
-	    }
+			print_r($data);
+	      }
 	}
 
 }
