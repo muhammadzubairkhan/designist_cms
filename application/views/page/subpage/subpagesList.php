@@ -295,7 +295,7 @@
                                                                     <td><?php echo $row->pname; ?></td>
                                                                     <td><?php echo $row->purl; ?></td>
                                                                     <td><?php echo $row->pslug; ?></td>
-                                                                    <td><a href="#">Edit</a> | <a href="#">Delete</a> </td>
+                                                                    <td><a href="edit_page?id=<?php echo $row->pid; ?>">Edit</a> | <a href="delete_page?id=<?php echo $row->pid; ?>">Delete</a> </td>
                                                                 </tr>
 
                                                                 <?php
