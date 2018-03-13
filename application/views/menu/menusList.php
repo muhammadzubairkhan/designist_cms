@@ -123,10 +123,10 @@
                                     <a href=""> <i class="fa fa-th-large"></i> Pages <i class="fa arrow"></i> </a>
                                     <ul>
                                         <li> <a href="items-list.html">
-                                    Pages List
+                                    View Page
                                 </a> </li>
                                         <li> <a href="item-editor.html">
-                                    Pages Editor
+                                    Add Page
                                 </a> </li>
                                     </ul>
                                 </li>
@@ -134,14 +134,14 @@
                                     <a href=""> <i class="fa fa-file-text-o"></i> Sub Pages <i class="fa arrow"></i> </a>
                                     <ul>
                                         <li> <a href="items-list.html">
-                                    Sub Pages List
+                                    View Sub Page
                                 </a> </li>
                                         <li> <a href="item-editor.html">
-                                    Sub Pages Editor
+                                    Add Sub Page
                                 </a> </li>
                                     </ul>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href=""> <i class="fa fa-bar-chart"></i> Menus <i class="fa arrow"></i> </a>
                                     <ul>
                                         <li> <a href="charts-flot.html">
@@ -162,7 +162,7 @@
                                     Sub Menus Editor
                                 </a> </li>
                                     </ul>
-                                </li>
+                                </li> -->
 
 
                                 <li>

@@ -122,10 +122,10 @@
                                     <a href=""> <i class="fa fa-th-large"></i> Pages <i class="fa arrow"></i> </a>
                                     <ul>
                                         <li> <a href="list_page">
-                                    Pages List
+                                    View Page
                                 </a> </li>
                                         <li> <a href="edit_page">
-                                    Pages Editor
+                                    Add Page
                                 </a> </li>
                                     </ul>
                                 </li>
@@ -133,14 +133,14 @@
                                     <a href=""> <i class="fa fa-file-text-o"></i> Sub Pages <i class="fa arrow"></i> </a>
                                     <ul>
                                         <li> <a href="list_subpage">
-                                    Sub Pages List
+                                    View Sub Page
                                 </a> </li>
                                         <li> <a href="edit_subpage">
-                                    Sub Pages Editor
+                                    Add Sub Page
                                 </a> </li>
                                     </ul>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href=""> <i class="fa fa-bar-chart"></i> Menus <i class="fa arrow"></i> </a>
                                     <ul>
                                         <li> <a href="list_menu">
@@ -161,7 +161,7 @@
                                     Sub Menus Editor
                                 </a> </li>
                                     </ul>
-                                </li>
+                                </li> -->
 
 
                                 <li>
@@ -277,181 +277,47 @@
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-block">
+
                                         <div class="card-title-block">
-                                            <h3 class="title">
-                            Page Information
-                        </h3> </div>
-                                        <section class="example">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <form action="">
-                                                      <div class="col-md-6">
-                                                          <div class="form-group">
-                                                            <label for="email">Page Name:</label>
-                                                                <input type="text" class="form-control" id="page_name">
-                                                          </div>
-                                                      </div>
 
-                                                      <div class="col-md-6">
-                                                          <div class="form-group">
-                                                            <label for="pwd">Page Slug:</label>
-                                                            <input type="text" class="form-control" id="page_slug">
-                                                          </div>
-                                                      </div>
-
-                                                      <div class="col-md-12">
-                                                          <div class="form-group">
-                                                            <label for="pwd">Page URL:</label>
-                                                            <input type="text" class="form-control" id="page_url">
-                                                          </div>
-                                                      </div>
-
-                                                      <div class="col-md-12">
-                                                          <div class="form-group">
-                                                            <label for="pwd">Page Excerpt:</label>
-                                                            <input type="text" class="form-control" id="page_excerpt">
-                                                          </div>
-                                                      </div>
-
-                                                      <div class="col-md-12">
-                                                          <div class="form-group">
-                                                            <label for="pwd">Page Content:</label>
-                                                                <!-- Create the editor container -->
-                                                                <div class="wyswyg">
-                                                                    <div class="toolbar">
-                                                                        <span class="ql-format-group">
-                                                                            <select title="Size" class="ql-size">
-                                                                                <option value="10px">Small</option>
-                                                                                <option value="13px" selected>Normal</option>
-                                                                                <option value="18px">Large</option>
-                                                                                <option value="32px">Huge</option>
-                                                                            </select>
-                                                                        </span>
-
-                                                                        <span class="ql-format-group">
-                                                                            <span title="Bold" class="ql-format-button ql-bold"></span>
-                                                                            <span class="ql-format-separator"></span>
-                                                                            <span title="Italic" class="ql-format-button ql-italic"></span>
-                                                                            <span class="ql-format-separator"></span>
-                                                                            <span title="Underline" class="ql-format-button ql-underline"></span>
-                                                                            <span class="ql-format-separator"></span>
-                                                                            <span title="Strikethrough" class="ql-format-button ql-strike"></span>
-                                                                        </span>
-
-                                                                        <span class="ql-format-group">
-                                                                            <select title="Text Color" class="ql-color">
-                                                                                <option value="rgb(0, 0, 0)" label="rgb(0, 0, 0)" selected></option>
-                                                                                <option value="rgb(230, 0, 0)" label="rgb(230, 0, 0)"></option>
-                                                                                <option value="rgb(255, 153, 0)" label="rgb(255, 153, 0)"></option>
-                                                                                <option value="rgb(255, 255, 0)" label="rgb(255, 255, 0)"></option>
-                                                                                <option value="rgb(0, 138, 0)" label="rgb(0, 138, 0)"></option>
-                                                                                <option value="rgb(0, 102, 204)" label="rgb(0, 102, 204)"></option>
-                                                                                <option value="rgb(153, 51, 255)" label="rgb(153, 51, 255)"></option>
-                                                                                <option value="rgb(255, 255, 255)" label="rgb(255, 255, 255)"></option>
-                                                                                <option value="rgb(250, 204, 204)" label="rgb(250, 204, 204)"></option>
-                                                                                <option value="rgb(255, 235, 204)" label="rgb(255, 235, 204)"></option>
-                                                                                <option value="rgb(255, 255, 204)" label="rgb(255, 255, 204)"></option>
-                                                                                <option value="rgb(204, 232, 204)" label="rgb(204, 232, 204)"></option>
-                                                                                <option value="rgb(204, 224, 245)" label="rgb(204, 224, 245)"></option>
-                                                                                <option value="rgb(235, 214, 255)" label="rgb(235, 214, 255)"></option>
-                                                                                <option value="rgb(187, 187, 187)" label="rgb(187, 187, 187)"></option>
-                                                                                <option value="rgb(240, 102, 102)" label="rgb(240, 102, 102)"></option>
-                                                                                <option value="rgb(255, 194, 102)" label="rgb(255, 194, 102)"></option>
-                                                                                <option value="rgb(255, 255, 102)" label="rgb(255, 255, 102)"></option>
-                                                                                <option value="rgb(102, 185, 102)" label="rgb(102, 185, 102)"></option>
-                                                                                <option value="rgb(102, 163, 224)" label="rgb(102, 163, 224)"></option>
-                                                                                <option value="rgb(194, 133, 255)" label="rgb(194, 133, 255)"></option>
-                                                                                <option value="rgb(136, 136, 136)" label="rgb(136, 136, 136)"></option>
-                                                                                <option value="rgb(161, 0, 0)" label="rgb(161, 0, 0)"></option>
-                                                                                <option value="rgb(178, 107, 0)" label="rgb(178, 107, 0)"></option>
-                                                                                <option value="rgb(178, 178, 0)" label="rgb(178, 178, 0)"></option>
-                                                                                <option value="rgb(0, 97, 0)" label="rgb(0, 97, 0)"></option>
-                                                                                <option value="rgb(0, 71, 178)" label="rgb(0, 71, 178)"></option>
-                                                                                <option value="rgb(107, 36, 178)" label="rgb(107, 36, 178)"></option>
-                                                                                <option value="rgb(68, 68, 68)" label="rgb(68, 68, 68)"></option>
-                                                                                <option value="rgb(92, 0, 0)" label="rgb(92, 0, 0)"></option>
-                                                                                <option value="rgb(102, 61, 0)" label="rgb(102, 61, 0)"></option>
-                                                                                <option value="rgb(102, 102, 0)" label="rgb(102, 102, 0)"></option>
-                                                                                <option value="rgb(0, 55, 0)" label="rgb(0, 55, 0)"></option>
-                                                                                <option value="rgb(0, 41, 102)" label="rgb(0, 41, 102)"></option>
-                                                                                <option value="rgb(61, 20, 102)" label="rgb(61, 20, 102)"></option>
-                                                                            </select>
-                                                                            <span class="ql-format-separator"></span>
-                                                                            <select title="Background Color" class="ql-background">
-                                                                                <option value="rgb(0, 0, 0)" label="rgb(0, 0, 0)"></option>
-                                                                                <option value="rgb(230, 0, 0)" label="rgb(230, 0, 0)"></option>
-                                                                                <option value="rgb(255, 153, 0)" label="rgb(255, 153, 0)"></option>
-                                                                                <option value="rgb(255, 255, 0)" label="rgb(255, 255, 0)"></option>
-                                                                                <option value="rgb(0, 138, 0)" label="rgb(0, 138, 0)"></option>
-                                                                                <option value="rgb(0, 102, 204)" label="rgb(0, 102, 204)"></option>
-                                                                                <option value="rgb(153, 51, 255)" label="rgb(153, 51, 255)"></option>
-                                                                                <option value="rgb(255, 255, 255)" label="rgb(255, 255, 255)" selected></option>
-                                                                                <option value="rgb(250, 204, 204)" label="rgb(250, 204, 204)"></option>
-                                                                                <option value="rgb(255, 235, 204)" label="rgb(255, 235, 204)"></option>
-                                                                                <option value="rgb(255, 255, 204)" label="rgb(255, 255, 204)"></option>
-                                                                                <option value="rgb(204, 232, 204)" label="rgb(204, 232, 204)"></option>
-                                                                                <option value="rgb(204, 224, 245)" label="rgb(204, 224, 245)"></option>
-                                                                                <option value="rgb(235, 214, 255)" label="rgb(235, 214, 255)"></option>
-                                                                                <option value="rgb(187, 187, 187)" label="rgb(187, 187, 187)"></option>
-                                                                                <option value="rgb(240, 102, 102)" label="rgb(240, 102, 102)"></option>
-                                                                                <option value="rgb(255, 194, 102)" label="rgb(255, 194, 102)"></option>
-                                                                                <option value="rgb(255, 255, 102)" label="rgb(255, 255, 102)"></option>
-                                                                                <option value="rgb(102, 185, 102)" label="rgb(102, 185, 102)"></option>
-                                                                                <option value="rgb(102, 163, 224)" label="rgb(102, 163, 224)"></option>
-                                                                                <option value="rgb(194, 133, 255)" label="rgb(194, 133, 255)"></option>
-                                                                                <option value="rgb(136, 136, 136)" label="rgb(136, 136, 136)"></option>
-                                                                                <option value="rgb(161, 0, 0)" label="rgb(161, 0, 0)"></option>
-                                                                                <option value="rgb(178, 107, 0)" label="rgb(178, 107, 0)"></option>
-                                                                                <option value="rgb(178, 178, 0)" label="rgb(178, 178, 0)"></option>
-                                                                                <option value="rgb(0, 97, 0)" label="rgb(0, 97, 0)"></option>
-                                                                                <option value="rgb(0, 71, 178)" label="rgb(0, 71, 178)"></option>
-                                                                                <option value="rgb(107, 36, 178)" label="rgb(107, 36, 178)"></option>
-                                                                                <option value="rgb(68, 68, 68)" label="rgb(68, 68, 68)"></option>
-                                                                                <option value="rgb(92, 0, 0)" label="rgb(92, 0, 0)"></option>
-                                                                                <option value="rgb(102, 61, 0)" label="rgb(102, 61, 0)"></option>
-                                                                                <option value="rgb(102, 102, 0)" label="rgb(102, 102, 0)"></option>
-                                                                                <option value="rgb(0, 55, 0)" label="rgb(0, 55, 0)"></option>
-                                                                                <option value="rgb(0, 41, 102)" label="rgb(0, 41, 102)"></option>
-                                                                                <option value="rgb(61, 20, 102)" label="rgb(61, 20, 102)"></option>
-                                                                            </select>
-                                                                        </span>
-
-                                                                        <span class="ql-format-group">
-                                                                            <span title="List" class="ql-format-button ql-list"></span>
-                                                                            <span class="ql-format-separator"></span>
-                                                                            <span title="Bullet" class="ql-format-button ql-bullet"></span>
-                                                                            <span class="ql-format-separator"></span>
-                                                                                <select title="Text Alignment" class="ql-align">
-                                                                                    <option value="left" label="Left" selected></option>
-                                                                                    <option value="center" label="Center"></option>
-                                                                                    <option value="right" label="Right"></option>
-                                                                                    <option value="justify" label="Justify"></option>
-                                                                                </select>
-                                                                            </span>
-                                                                            <span class="ql-format-group">
-                                                                                <span title="Link" class="ql-format-button ql-link"></span>
-                                                                                <span class="ql-format-separator"></span>
-                                                                                    <button type="button" title="Image" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#modal-media">
-                                                                                    <i class="fa fa-image"></i> Media
-                                                                                    </button>
-                                                                            </span>
-
-                                                                            <span class="ql-format-group">
-                                                                            </span>
-                                                                        </div>
-                                                                        <!-- Create the editor container -->
-                                                                        <div class="editor"> Hello World </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-6">
-                                                                <button type="submit" class="btn btn-default btn-success">Save Page</button>
-                                                            </div>
-                                                    </form>
+                                            <?php if (isset($message)) { ?>
+                                                <div class="row" id="alertMsg">
+                                                    <div class="col-md-6">
+                                                        <center class="alert alert-success">
+                                                            <p>
+                                                                <?php echo $message; ?>
+                                                            </p>
+                                                        </center>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </section>
+                                            <?php } ?>
+
+                                            <section class="example">
+                                                <div class="container">
+                                                    <div class="row">
+
+                                                        <?php echo form_open('main/addSubPage'); ?>
+                                                        <?php echo form_label('Page Name :'); ?>
+                                                        <?php echo form_error('dname'); ?><br />
+                                                        <?php echo form_input(array('id' => 'page_name', 'name' => 'page_name', 'placeholder' => 'Page Name', 'class' => 'form-control')); ?><br />
+                                                        <?php echo form_label('Page Slug :'); ?> <?php echo form_error('dslug'); ?><br />
+                                                        <?php echo form_input(array('id' => 'page_slug', 'name' => 'page_slug', 'placeholder' => 'Page Slug', 'class' => 'form-control')); ?><br />
+
+                                                        <?php echo form_label('Page URL :'); ?> <?php echo form_error('durl'); ?><br />
+                                                        <?php echo form_input(array('id' => 'page_url', 'name' => 'page_url', 'placeholder' => 'Page URL', 'class' => 'form-control')); ?><br />
+
+                                                        <?php echo form_label('Page Excerpt :'); ?> <?php echo form_error('dexcerpt'); ?><br />
+                                                        <?php echo form_input(array('id' => 'page_excerpt', 'name' => 'page_excerpt', 'placeholder' => 'Page Excerpt', 'class' => 'form-control')); ?><br />
+
+                                                        <?php echo form_label('Page Content :'); ?> <?php echo form_error('dcontent'); ?><br />
+                                                        <?php echo form_textarea(array('id' => 'page_content', 'name' => 'page_content', 'placeholder' => 'Page Content', 'class' => 'form-control')); ?><br />
+
+                                                        <?php echo form_submit(array('id' => 'submit', 'value' => 'Submit', 'class' => 'btn btn-default btn-success')); ?>
+                                                        <?php echo form_close(); ?>
+
+                                                    </div>
+                                                </div>
+                                            </section>
 
                                     </div>
                                 </div>

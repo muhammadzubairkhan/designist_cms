@@ -122,10 +122,10 @@
                                     <a href=""> <i class="fa fa-th-large"></i> Pages <i class="fa arrow"></i> </a>
                                     <ul>
                                         <li> <a href="add_page">
-                                    Add
+                                    Add Page
                                 </a> </li>
                                         <li> <a href="list_page">
-                                    View
+                                    View Page
                                 </a> </li>
                                         <li> <a href="edit_page">
                                     Edit
@@ -143,7 +143,7 @@
                                 </a> </li>
                                     </ul>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href=""> <i class="fa fa-bar-chart"></i> Menus <i class="fa arrow"></i> </a>
                                     <ul>
                                         <li> <a href="list_menu">
@@ -164,7 +164,7 @@
                                     Sub Menus Editor
                                 </a> </li>
                                     </ul>
-                                </li>
+                                </li> -->
 
 
                                 <li>

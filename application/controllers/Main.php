@@ -5,10 +5,18 @@ class Main extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
+
 		//Including validation library
 		$this->load->library('form_validation');
 
+		//Load session library
+        $this->load->library('session');
+
+        //Insert model
 		$this->load->model('insert_model');
+
+		//View model
+		$this->load->model('view_model');
 	}
 
 	public function index()
@@ -21,9 +29,15 @@ class Main extends CI_Controller {
 		$this->load->view('page/pagesCreate');
 	}
 
+	public function add_subpage()
+	{
+		$this->load->view('page/subpagesCreate');
+	}
+
 	public function list_page()
 	{
-		$this->load->view('page/pagesList');
+		$data['query'] = $this->view_model->pages();
+		$this->load->view('page/pagesList', $data);
 	}
 
 	public function edit_page()
@@ -33,7 +47,8 @@ class Main extends CI_Controller {
 
 	public function list_subpage()
 	{
-		$this->load->view('page/subpage/subpagesList');
+		$data['query'] = $this->view_model->subpages();
+		$this->load->view('page/subpage/subpagesList', $data);
 	}
 
 	public function edit_subpage()
@@ -63,11 +78,8 @@ class Main extends CI_Controller {
 
 	public function addPage()
 	{
-		if ($this->form_validation->run() == FALSE) {
-			$this->edit_page();
-			echo 'Failed';
-		} else {
-			echo 'Success';
+		if (isset($_POST) && !empty($_POST)) {
+
 			//Setting values for table columns
 			$data = array(
 			'pname' => $this->input->post('page_name'),
@@ -75,17 +87,54 @@ class Main extends CI_Controller {
 			'purl' => $this->input->post('page_url'),
 			'pexcerpt' => $this->input->post('page_excerpt'),
 			'pcontent' => $this->input->post('page_content'),
+			'ppagetype' => 0,
 			);
-
-			print_r($data);
 
 			//Transferring data to Model
 			$this->insert_model->form_insert($data);
 			$data['message'] = 'Page Added Successfully';
+
 			//Loading View
-			$this->load->edit_page();
-			print_r($data);
-	      }
+			$this->load->view('page/pagesEditor', $data);
+			//echo 'Success';
+		} else {
+			$data['message'] = 'Error Occurred';
+			$this->load->view('page/pagesEditor', $data);
+			//echo 'Failed';
+    	}
 	}
 
+	public function addSubPage()
+	{
+		if (isset($_POST) && !empty($_POST)) {
+
+			//Setting values for table columns
+			$data = array(
+			'pname' => $this->input->post('page_name'),
+			'pslug' => $this->input->post('page_slug'),
+			'purl' => $this->input->post('page_url'),
+			'pexcerpt' => $this->input->post('page_excerpt'),
+			'pcontent' => $this->input->post('page_content'),
+			'ppagetype' => 1,
+			);
+
+			//Transferring data to Model
+			$this->insert_model->form_insert($data);
+			$data['message'] = 'Sub Page Added Successfully';
+
+			//Loading View
+			$this->load->view('page/pagesEditor', $data);
+			//echo 'Success';
+		} else {
+			$data['message'] = 'Error Occurred';
+			$this->load->view('page/pagesEditor', $data);
+			//echo 'Failed';
+    	}
+	}
+
+	public function getAllPages()
+	{
+		// $data['query'] = $this->view_model->pages();
+  		// $this->load->view('pagesList', $data);
+	}
 }

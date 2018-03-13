@@ -122,10 +122,10 @@
                                     <a href=""> <i class="fa fa-th-large"></i> Pages <i class="fa arrow"></i> </a>
                                     <ul>
                                         <li> <a href="list_page">
-                                    Pages List
+                                    View Page
                                 </a> </li>
                                         <li> <a href="edit_page">
-                                    Pages Editor
+                                    Add Page
                                 </a> </li>
                                     </ul>
                                 </li>
@@ -133,14 +133,14 @@
                                     <a href=""> <i class="fa fa-file-text-o"></i> Sub Pages <i class="fa arrow"></i> </a>
                                     <ul>
                                         <li> <a href="list_subpage">
-                                    Sub Pages List
+                                    View Sub Page
                                 </a> </li>
                                         <li> <a href="edit_subpage">
-                                    Sub Pages Editor
+                                    Add Sub Page
                                 </a> </li>
                                     </ul>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href=""> <i class="fa fa-bar-chart"></i> Menus <i class="fa arrow"></i> </a>
                                     <ul>
                                         <li> <a href="list_menu">
@@ -161,7 +161,7 @@
                                     Sub Menus Editor
                                 </a> </li>
                                     </ul>
-                                </li>
+                                </li> -->
 
 
                                 <li>
@@ -267,7 +267,8 @@
                                 <div class="card">
                                     <div class="card-block">
                                         <div class="card-title-block">
-                                            <h3 class="title">Listing Sub Pages</h3> </div>
+                                            <h3 class="title">Total Pages <?php echo count($query); ?></h3> </div>
+
                                                 <section class="example">
                                                     <div class="table-responsive">
                                                         <table class="table table-striped table-bordered table-hover">
@@ -281,34 +282,28 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
+
+                                                                <?php
+
+                                                                foreach($query as $row)
+                                                                {
+
+                                                                ?>
+
                                                                 <tr>
-                                                                    <td>1</td>
-                                                                    <td>Home</td>
-                                                                    <td>/home</td>
-                                                                    <td>home</td>
+                                                                    <td><?php echo $row->pid; ?></td>
+                                                                    <td><?php echo $row->pname; ?></td>
+                                                                    <td><?php echo $row->purl; ?></td>
+                                                                    <td><?php echo $row->pslug; ?></td>
                                                                     <td><a href="#">Edit</a> | <a href="#">Delete</a> </td>
                                                                 </tr>
-                                                                <tr>
-                                                                    <td>2</td>
-                                                                    <td>About Us</td>
-                                                                    <td>/about-us</td>
-                                                                    <td>about-us</td>
-                                                                    <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>3</td>
-                                                                    <td>Contact</td>
-                                                                    <td>/contact</td>
-                                                                    <td>contact</td>
-                                                                    <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>4</td>
-                                                                    <td>Projects</td>
-                                                                    <td>/projects</td>
-                                                                    <td>projects</td>
-                                                                    <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
-                                                                </tr>
+
+                                                                <?php
+
+                                                                }
+
+                                                                ?>
+
                                                             </tbody>
                                                         </table>
                                                     </div>

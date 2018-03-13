@@ -113,93 +113,80 @@
                         </div>
                         <nav class="menu">
                             <ul class="nav metismenu" id="sidebar-menu">
-                                <li>
+                                <li class="active">
                                     <a href="index.html"> <i class="fa fa-home"></i> Dashboard </a>
                                 </li>
                                 <li>
-                                    <a href=""> <i class="fa fa-th-large"></i> Items Manager <i class="fa arrow"></i> </a>
+                                    <a href=""> <i class="fa fa-th-large"></i> Pages <i class="fa arrow"></i> </a>
                                     <ul>
                                         <li> <a href="items-list.html">
-    								Items List
-    							</a> </li>
+                                    View Page
+                                </a> </li>
                                         <li> <a href="item-editor.html">
-    								Item Editor
-    							</a> </li>
+                                    Add Page
+                                </a> </li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href=""> <i class="fa fa-bar-chart"></i> Charts <i class="fa arrow"></i> </a>
+                                 <li>
+                                    <a href=""> <i class="fa fa-file-text-o"></i> Sub Pages <i class="fa arrow"></i> </a>
+                                    <ul>
+                                        <li> <a href="items-list.html">
+                                    View Sub Page
+                                </a> </li>
+                                        <li> <a href="item-editor.html">
+                                    Add Sub Page
+                                </a> </li>
+                                    </ul>
+                                </li>
+                                <!-- <li>
+                                    <a href=""> <i class="fa fa-bar-chart"></i> Menus <i class="fa arrow"></i> </a>
                                     <ul>
                                         <li> <a href="charts-flot.html">
-    								Flot Charts
-    							</a> </li>
+                                    Menus List
+                                </a> </li>
                                         <li> <a href="charts-morris.html">
-    								Morris Charts
-    							</a> </li>
+                                    Menus Editor
+                                </a> </li>
                                     </ul>
                                 </li>
-                                <li class="active open">
-                                    <a href=""> <i class="fa fa-table"></i> Tables <i class="fa arrow"></i> </a>
+                                <li>
+                                    <a href=""> <i class="fa fa-table"></i> Sub Menus <i class="fa arrow"></i> </a>
                                     <ul>
                                         <li> <a href="static-tables.html">
-    								Static Tables
-    							</a> </li>
-                                        <li class="active"> <a href="responsive-tables.html">
-    								Responsive Tables
-    							</a> </li>
+                                    Sub Menus List
+                                </a> </li>
+                                        <li> <a href="responsive-tables.html">
+                                    Sub Menus Editor
+                                </a> </li>
                                     </ul>
-                                </li>
+                                </li> -->
+
+
                                 <li>
-                                    <a href="forms.html"> <i class="fa fa-pencil-square-o"></i> Forms </a>
-                                </li>
-                                <li>
-                                    <a href=""> <i class="fa fa-desktop"></i> UI Elements <i class="fa arrow"></i> </a>
-                                    <ul>
-                                        <li> <a href="buttons.html">
-    								Buttons
-    							</a> </li>
-                                        <li> <a href="cards.html">
-    								Cards
-    							</a> </li>
-                                        <li> <a href="typography.html">
-    								Typography
-    							</a> </li>
-                                        <li> <a href="icons.html">
-    								Icons
-    							</a> </li>
-                                        <li> <a href="grid.html">
-    								Grid
-    							</a> </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href=""> <i class="fa fa-file-text-o"></i> Pages <i class="fa arrow"></i> </a>
+                                    <a href=""> <i class="fa fa-gear"></i> Settings <i class="fa arrow"></i> </a>
                                     <ul>
                                         <li> <a href="login.html">
-    								Login
-    							</a> </li>
+                                    Login
+                                </a> </li>
                                         <li> <a href="signup.html">
-    								Sign Up
-    							</a> </li>
+                                    Sign Up
+                                </a> </li>
                                         <li> <a href="reset.html">
-    								Reset
-    							</a> </li>
+                                    Reset
+                                </a> </li>
                                         <li> <a href="error-404.html">
-    								Error 404 App
-    							</a> </li>
+                                    Error 404 App
+                                </a> </li>
                                         <li> <a href="error-404-alt.html">
-    								Error 404 Global
-    							</a> </li>
+                                    Error 404 Global
+                                </a> </li>
                                         <li> <a href="error-500.html">
-    								Error 500 App
-    							</a> </li>
+                                    Error 500 App
+                                </a> </li>
                                         <li> <a href="error-500-alt.html">
-    								Error 500 Global
-    							</a> </li>
+                                    Error 500 Global
+                                </a> </li>
                                     </ul>
-                                </li>
-                                <li>
-                                    <a href="https://github.com/modularcode/modular-admin-html"> <i class="fa fa-github-alt"></i> Theme Docs </a>
                                 </li>
                             </ul>
                         </nav>
