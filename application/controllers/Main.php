@@ -45,6 +45,13 @@ class Main extends CI_Controller {
 		$this->load->view('page/pagesEditor');
 	}
 
+	public function get_page($pageId = NULL)
+	{
+		$pageId = $_GET['id'];
+		$data['query'] = $this->view_model->pageByPageId($pageId);
+		$this->load->view('page/pagesUpdate', $data);
+	}
+
 	public function list_subpage()
 	{
 		$data['query'] = $this->view_model->subpages();
@@ -74,6 +81,35 @@ class Main extends CI_Controller {
 	public function edit_submenu()
 	{
 		$this->load->view('menu/submenu/submenusEditor');
+	}
+
+	public function updatePage()
+	{
+		if (isset($_POST) && !empty($_POST)) {
+
+			$id = $this->input->post('page_id');
+
+			//Setting values for table columns
+			$data = array(
+			'pname' => $this->input->post('page_name'),
+			'pslug' => $this->input->post('page_slug'),
+			'purl' => $this->input->post('page_url'),
+			'pexcerpt' => $this->input->post('page_excerpt'),
+			'pcontent' => $this->input->post('page_content'),
+			'ppagetype' => 0,
+			);
+
+			//Transferring data to Model
+			$this->insert_model->page_update($id, $data);
+			$data['message'] = 'Page Updated Successfully';
+
+			//Loading View
+			$this->load->view('page/pagesUpdate', $data);
+		} else {
+			$data['message'] = 'Error Occurred';
+			$this->load->view('page/pagesUpdate', $data);
+			echo 'Failed';
+    	}
 	}
 
 	public function addPage()

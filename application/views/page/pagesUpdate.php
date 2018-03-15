@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title> CMS | Page Edit </title>
+        <title> CMS | Page Update </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -272,6 +272,16 @@
                             if(isset($_GET['id']) && !empty($_GET['id']))
                             {
 
+                                foreach($query as $item)
+                                {
+                                    $pageId = $item->pid;
+                                    $pageName = $item->pname;
+                                    $pageSlug = $item->pslug;
+                                    $pageUrl  = $item->purl;
+                                    $pageExcerpt = $item->pexcerpt;
+                                    $pageContent = $item->pcontent;
+                                }
+
                             ?>
 
                             <section class="section">
@@ -286,20 +296,22 @@
                                                             <div class="row">
 
                                                                 <?php echo form_open('main/updatePage'); ?>
+                                                                <?php echo form_error('did'); ?><br />
+                                                                <?php echo form_hidden('page_id', $pageId); ?><br />
                                                                 <?php echo form_label('Page Name :'); ?>
                                                                 <?php echo form_error('dname'); ?><br />
-                                                                <?php echo form_input(array('id' => 'page_name', 'name' => 'page_name', 'placeholder' => 'Page Name', 'class' => 'form-control')); ?><br />
+                                                                <?php echo form_input(array('id' => 'page_name', 'name' => 'page_name', 'placeholder' => 'Page Name', 'class' => 'form-control', 'value' => $pageName)); ?><br />
                                                                 <?php echo form_label('Page Slug :'); ?> <?php echo form_error('dslug'); ?><br />
-                                                                <?php echo form_input(array('id' => 'page_slug', 'name' => 'page_slug', 'placeholder' => 'Page Slug', 'class' => 'form-control')); ?><br />
+                                                                <?php echo form_input(array('id' => 'page_slug', 'name' => 'page_slug', 'placeholder' => 'Page Slug', 'class' => 'form-control', 'value' => $pageSlug)); ?><br />
 
                                                                 <?php echo form_label('Page URL :'); ?> <?php echo form_error('durl'); ?><br />
-                                                                <?php echo form_input(array('id' => 'page_url', 'name' => 'page_url', 'placeholder' => 'Page URL', 'class' => 'form-control')); ?><br />
+                                                                <?php echo form_input(array('id' => 'page_url', 'name' => 'page_url', 'placeholder' => 'Page URL', 'class' => 'form-control', 'value' => $pageUrl)); ?><br />
 
                                                                 <?php echo form_label('Page Excerpt :'); ?> <?php echo form_error('dexcerpt'); ?><br />
-                                                                <?php echo form_input(array('id' => 'page_excerpt', 'name' => 'page_excerpt', 'placeholder' => 'Page Excerpt', 'class' => 'form-control')); ?><br />
+                                                                <?php echo form_input(array('id' => 'page_excerpt', 'name' => 'page_excerpt', 'placeholder' => 'Page Excerpt', 'class' => 'form-control', 'value' => $pageExcerpt)); ?><br />
 
                                                                 <?php echo form_label('Page Content :'); ?> <?php echo form_error('dcontent'); ?><br />
-                                                                <?php echo form_textarea(array('id' => 'page_content', 'name' => 'page_content', 'placeholder' => 'Page Content', 'class' => 'form-control')); ?><br />
+                                                                <?php echo form_textarea(array('id' => 'page_content', 'name' => 'page_content', 'placeholder' => 'Page Content', 'class' => 'form-control', 'value' => $pageContent)); ?><br />
 
                                                                 <?php echo form_submit(array('id' => 'submit', 'value' => 'Submit', 'class' => 'btn btn-default btn-success')); ?>
                                                                 <?php echo form_close(); ?>

@@ -18,5 +18,11 @@ class View_model extends CI_Model {
         return $query->result();
 	}
 
+	function pageByPageId($pageId) {
+
+		$query = $this->db->get_where('pages', array('pid' => $pageId)); //pages table data fetching
+        return $query->result();
+	}
+
 }
 ?>

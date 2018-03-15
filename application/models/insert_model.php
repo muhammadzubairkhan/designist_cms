@@ -11,5 +11,10 @@ class Insert_model extends CI_Model {
 		$this->db->insert('pages', $data);
 	}
 
+	function page_update($id, $data) {
+		$this->db->where('pid', $id);
+		$this->db->update('pages', $data);
+	}
+
 }
 ?>
